@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,700;1,400&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+
+}
+
+body{
+    background-color: rgba(245, 210, 170, 0.76);
+
+}
+
+.header{
+    background-color: #f4b4fae0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10%;
+    border-radius: 75% 10%;
+}
+
+.header .logo{
+    cursor: pointer;
+}
+.header .logo img{
+    height: 60px;
+    width: auto;
+    margin-right: 50px;
+    transition: all 0.3s;
+}
+
+.header .logo img:hover{
+    transform: scale(1.2);
+
+}
+
+.header .nav-links{
+    list-style: none;
+}
+
+.header .nav-links li{
+    display: inline-block;
+    padding: 0 20px;
+
+}
+
+.header .nav-links li.hover,
+.overlay a:hover{
+    transform: scale(1.1);
+}
+.header .nav-links a{
+    font-size: 700;
+    color: black;
+}
+
+.header .nav-links li a:hover{
+    color: rgba(226, 15, 96, 0.945);
+}
+
+.menu{
+    display: none;
+}
+
+.header .btn button,
+.header .menu button{
+    font-weight: 700;
+    color: rgb(5, 5, 5);
+    padding: 9px 25px;
+    background: bisque;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all0.3s ease 0s;
+
+}
+
+.header .btn button:hover,
+.header .menu button:hover{
+    background-color: rgba(171, 13, 219, 0.37);
+    color: rgb(248, 246, 247);
+    transition: scale(1.1);
+
+}
+
+@media screen and (max-width: 800px) {
+    
+    .nav-links, .btn{
+        display: none;
+    }
+    .menu{
+        display: inherit;
+    }
+}
+
+/*nav*/
+.header a{
+    text-decoration: none;
+}
+
+.header .overlay{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    background-color: #f4b4fae0;
+    border-radius: 10%;
+    overflow: hidden;
+    transition: all 0.3s ease 0s;
+}
+
+.header .overlay .overlay-content{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .overlay a{
+    padding: 15px;
+    font-size: 20px;
+    display: block;
+    transition: all 0.3s ease 0s;
+    font-weight: 700;
+    color:rgb(0, 0, 0);
+}
+
+.header .overlay a:hover,
+.header .overlay a:focus{
+    color: rgb(202, 127, 127);
+}
+
+.header .overlay .close{
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 65px;
+}
+
+@media screen and (max-height: 450px){
+    .header .overlay a{
+        font-size: 20px;
+    }
+
+    .header .overlay .close{
+        font-size: 10px;
+        top: 15px;
+        right: 35px;
+
+    }
+}    
+
+#container-slider
+{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 20%;
+}
+#slider {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 70vh;
+    min-height: 500px;
+}
+#slider li {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100%;
+    height: 100%;
+    display: block;
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -ms-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+#container-slider .arrowPrev, #container-slider .arrowNext{
+    font-size: 30pt;
+    color: rgba(204, 204, 204, 0.65);
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    z-index: -1; 
+    border-radius: 50%;
+}
+#container-slider .arrowNext {
+    left: initial;
+    right: 50px !important;
+}
+.content_slider{
+    padding: 15px 30px;
+    color: #FFF;
+    width: 100%;
+    height: 100%;
+}
+.content_slider div{
+    text-align: center;
+}
+.content_slider h2{
+    font-family: 'arial';
+    font-size: 30pt;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.content_slider p {
+    font-size: 15pt;
+    font-family: 'arial';
+    color: #FFF;
+    margin-bottom: 20px;
+    border-radius: 50%;
+}
+#slider li .content_slider{
+    background: rgba(0, 0, 0, 0.308);
+    padding: 10px;
+}
+.content_slider{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btnSlider{
+    color: #FFF;
+    font-size: 15pt;
+    font-family: 'arial';
+    letter-spacing: 1px;
+    padding: 10px 50px;
+    border: 1px solid #CCC;
+    background: rgba(13, 13, 13, 0.55);
+    border-radius: 31px;
+    text-decoration: none;
+    transition: .30s all;
+}
+.btnSlider:hover{
+    background: #111;
+    border: 1px solid #111;
+}
+.listslider {
+    position: absolute;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    left: 50%;
+    bottom: 5%;
+    list-style: none;
+    z-index: 2;
+    transform: translateX(-50%);
+}
+.listslider li {
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+.listslider li a {
+    background: hwb(318 55% 9%);
+    border-radius: 60%;
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: relative;
+    bottom: 40px;
+}
+.item-select-slid {
+    background: rgb(250, 13, 104)  !important;
+}
+
+@media screen and (max-width: 800px){
+    .content_slider h2 {
+	    font-size: 15pt !important;
+	}
+	.content_slider p {
+	    font-size: 12pt !important;
+	}
+	#container-slider .arrowPrev, #container-slider .arrowNext{
+		font-size: 20pt;
+	}
+	#container-slider .arrowPrev{
+		left: 15px;
+	}
+	#container-slider .arrowNext{
+		right: 15px !important;
+	}
+	#slider{
+		height: 100px;
+		min-height: 400px;
+	}
+	#slider li .content_slider{
+		padding: 10px 35px;
+	}
+	.btnSlider{
+		padding: 10px 30px;
+    	font-size: 10pt;
+	}
+
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <img src="../LidCAKE/img/logod.png" width="150" height="150px" alt="logo">
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Pasteles</a></li>
+                <li><a href="#">Postres</a></li>
+                <li><a href="#">Panes</a></li>
+            </ul>
+        </nav>
+        <a href="#" class="btn"><button>Contact</button></a>
+        <a onclick="openNav()" class="menu" href="#"><button>Menu</button></a>
+
+        <div class="overlay" id="mobile-menu">
+            <a onclick="closeNav()" href="" class="close">&times;</a>
+            <div class="overlay-content">
+                <a href="#">Inicio</a>
+                <a href="#">Pasteles</a>
+                <a href="#">Postres</a>
+                <a href="#">Panes</a>
+                <a href="#">Contacto</a>
+            </div>
+        </div>
+    </header>
+    <section id="container-slider">	
+		<a href="javascript: fntExecuteSlide('prev');" class="arrowPrev"><i class="fas fa-chevron-circle-left"></i></a>
+		<a href="javascript: fntExecuteSlide('next');" class="arrowNext"><i class="fas fa-chevron-circle-right"></i></a>
+		<ul class="listslider">
+			<li><a itlist="itList_0" href="#" class="item-select-slid"></a></li>
+			<li><a itlist="itList_1" href="#"></a></li>
+			<li><a itlist="itList_2" href="#"></a></li>
+		</ul>
+		<ul id="slider">
+			<li style="background-image: url('../LidCAKE/img/slide1.png'); z-index:0; opacity: 1;">
+				<div class="content_slider" >
+					<div>
+						<h2>Dulces y postres</h2>
+						<p>Nos ajustamos al presupuesto de cada cliente</p>
+						<a href="#" class="btnSlider">Ver más</a>
+					</div>
+				</div>
+			</li>
+			<li style="background-image: url('../LidCAKE/img/fondo2.jpg'); ">
+				<div class="content_slider" >
+					<div>
+						<h2>Cada pastel es un sueño</h2>
+						<p>Pasteles 100% comestibles</p>
+						<a href="#" class="btnSlider">Ver más</a>
+					</div>
+				</div>
+			</li>
+			<li style="background-image: url('../LidCAKE/img/fondo3.jpg'); ">
+				<div class="content_slider" >
+					<div>
+						<h2>Pasteles 100% comestibles</h2>
+						<p>Algo especial, para alguien especial</p>
+						<a href="#" class="btnSlider">Ver más</a>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</section>
+    <script type= "text/javascript" src="function.js"></script>
+
+	<footer>
+		<br><br><br><br><hr><br>
+		<p>@DulcesAleyda</p>
+		<p>Barrigón, El Copé, La Pintada</p>
+		<p>Télefono: (+507) 6873-5906</p>
+	</footer>
+</body>
+</html>
