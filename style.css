@@ -27,9 +27,9 @@ body{
     cursor: pointer;
 }
 .header .logo img{
-    height: 60px;
+    height: 45px;
     width: auto;
-    margin-right: 50px;
+    margin-right: 40px;
     transition: all 0.3s;
 }
 
