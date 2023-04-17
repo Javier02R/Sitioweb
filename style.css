@@ -144,17 +144,21 @@ body{
     font-size: 65px;
 }
 
-@media screen and (max-height: 450px){
-    .header .overlay a{
-        font-size: 20px;
-    }
-
-    .header .overlay .close{
-        font-size: 10px;
-        top: 15px;
-        right: 35px;
-
-    }
+@media screen and (max-height: 800px){
+	.header.logo image{
+		height: 40px;
+		width: auto;
+	}
+	
+	.header .overlay a{
+		font-size: 20px;
+	}
+	
+	.header .overlay .close{
+		font-size: 10px;
+		top: 15px;
+		right: 35px;
+	}
 }    
 
 #container-slider
